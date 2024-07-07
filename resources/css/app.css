@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;400;500;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    transition: opacity 2s ease!important;
+    opacity: 1;
+}
+
+[x-cloak] {
+    display: none !important;
+}
+img {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+}
+* {
+    font-family: "Poppins", "Lato", "Montserrat", "sans-serif", "Segooe UI",
+        "system-ui";
+}
+
+/* CSS untuk input teks dan elemen select */
+.relative {
+    position: relative;
+}
+
+/* Gaya untuk input teks dan elemen select */
+.input-style {
+    display: block;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: transparent;
+    width: 100%;
+}
+
+/* Gaya label yang sesuai */
+.label-style {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transform: scale(0.85) translateY(-20px);
+    background-color: #dce6ff;
+    padding: 2px;
+    transition: all 0.3s;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Gaya label saat input dalam fokus */
+.input-style:focus + .label-style,
+.input-style:valid + .label-style {
+    top: 2px;
+    left: 2px;
+    transform: scale(0.85) translateY(-20px);
+    background-color: #dce6ff;
+}
+
+.select2-container--default
+    .select2-selection--single
+    .select2-selection__arrow {
+    height: 26px !important;
+    position: relative !important;
+    /* top: 10px !important; */
+    right: 1px !important;
+    width: 20px !important;
+}
+
+.pagination {
+    @apply flex gap-2 transition-all duration-150;
+}
+
+.paginate_button {
+    @apply flex justify-center items-center px-3 py-2 transition-all duration-200 bg-primary-10 text-primary-20 rounded-md mb-10;
+}
+
+.pagination .current {
+    @apply flex justify-center items-center px-3 py-2 transition-all duration-200 bg-primary-20 text-primary-10 rounded-md mb-10;
+}
+
+#userTable_filter input[type="search"] {
+    @apply appearance-none rounded-lg border-primary-10 p-1 bg-gray-50 px-2 py-1 mb-3 outline-none;
+}
+
+#userTable_length select {
+    @apply appearance-none rounded-lg border-primary-10 p-1 bg-gray-50 px-2 py-1 mb-3 outline-none;
+}
+
+.dataTables_empty {
+    @apply py-4;
+}
